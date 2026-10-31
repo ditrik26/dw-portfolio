@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S Residence | DW Interiors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@500;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Cabinet Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            sand: '#F7F6F2',
+            surface: '#FFFFFF',
+            ink: '#121212',
+            muted: '#666562',
+            rule: '#E2E0D8',
+          }
+        }
+      }
+    }
+    function handleInquiry(e) {
+      navigator.clipboard.writeText('wienekedesigns@gmail.com');
+      const toast = document.getElementById('toast');
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 4000);
+    }
+  </script>
+</head>
+<body class="bg-sand text-ink antialiased selection:bg-ink selection:text-white relative">
+
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-ink text-white font-mono text-xs px-5 py-3 border border-rule transition-opacity duration-300 opacity-0 pointer-events-none shadow-2xl flex items-center space-x-3">
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span>wienekedesigns@gmail.com copied to clipboard</span>
+  </div>
+
+  <header class="fixed top-0 left-0 w-full bg-sand/90 backdrop-blur-md z-40 border-b border-rule">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="font-display font-extrabold text-xl tracking-tight uppercase">DW Interiors</a>
+      <nav class="flex items-center space-x-6 sm:space-x-8 text-xs uppercase tracking-widest font-mono text-muted">
+        <a href="index.html" class="hover:text-ink transition">&larr; Selected Work</a>
+        <a href="about.html" class="hover:text-ink transition">Profile</a>
+        <a href="mailto:wienekedesigns@gmail.com?subject=Interior%20Design%20Commission%20Inquiry%20-%20DW%20Interiors" onclick="handleInquiry(event)" class="hover:text-ink transition">Inquire</a>
+      </nav>
+      <a href="mailto:wienekedesigns@gmail.com?subject=Interior%20Design%20Commission%20Inquiry%20-%20DW%20Interiors" onclick="handleInquiry(event)" class="hidden md:inline-block text-xs uppercase tracking-widest font-mono border border-ink px-4 py-2 hover:bg-ink hover:text-white transition">
+        Start Commission
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <section class="max-w-7xl mx-auto px-6 py-12 lg:py-16 border-b border-rule">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-rule">
+        <div>
+          <span class="font-mono text-xs text-muted uppercase tracking-widest block mb-2">Commission 02 / High-Rise Condominium</span>
+          <h1 class="font-display font-extrabold text-4xl sm:text-6xl tracking-tight">S Residence</h1>
+        </div>
+        <p class="font-mono text-xs text-muted mt-4 md:mt-0 uppercase tracking-widest">
+          Baron Tower, San Juan &mdash; High-Density Luxury Living
+        </p>
+      </div>
+
+      <div class="relative w-full aspect-[16/9] overflow-hidden rounded-sm bg-neutral-200">
+        <img src="Living Area.png" alt="S Residence Living Area Baron Tower" class="w-full h-full object-cover">
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-b border-rule mt-4 font-mono text-xs">
+        <div><span class="text-muted block mb-1">LOCATION</span><p class="font-medium text-ink uppercase">Baron Tower, Metro Manila</p></div>
+        <div><span class="text-muted block mb-1">TYPOLOGY</span><p class="font-medium text-ink uppercase">Contemporary High-Rise</p></div>
+        <div><span class="text-muted block mb-1">SPECIAL FEATURES</span><p class="font-medium text-ink uppercase">Aquaponic Garden Wall & Island</p></div>
+        <div><span class="text-muted block mb-1">SCOPE</span><p class="font-medium text-ink uppercase">Full Interior Design & FF&E</p></div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-16 space-y-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 bg-surface p-6 border border-rule">
+          <span class="font-mono text-xs text-muted block mb-4">GENERAL FURNITURE & PARTITION PLAN</span>
+          <div class="w-full bg-white flex items-center justify-center border border-rule overflow-hidden p-2">
+            <img src="Floor Plan for website.jpg" alt="S Residence Baron Tower Floor Plan" class="w-full h-auto object-contain">
+          </div>
+          <p class="text-xs text-muted mt-4 leading-relaxed">
+            Single-floor condominium plate cleanly dividing the open culinary spine from private suites, guest study, and utilities.
+          </p>
+        </div>
+        <div class="lg:col-span-7 space-y-6">
+          <div class="aspect-[16/9] overflow-hidden rounded-sm bg-neutral-200">
+            <img src="Kitchen.png" alt="Open Kitchen and Aquaponic Wall" class="w-full h-full object-cover">
+          </div>
+          <div class="aspect-[16/9] overflow-hidden rounded-sm bg-neutral-200">
+            <img src="Living Dining.png" alt="Living and Dining Connection" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-rule pt-12">
+        <span class="font-mono text-xs uppercase tracking-widest text-muted block mb-6">Private Suites & Flex Rooms</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="space-y-3">
+            <div class="aspect-[4/3] overflow-hidden rounded-sm bg-neutral-200">
+              <img src="MBR.png" alt="Master Bedroom Baron Tower" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-display font-bold text-base">Primary Suite</h4>
+            <p class="text-xs text-muted leading-relaxed">Padded linen bedhead panels, rich walnut millwork, brass bedside fixtures, and deep window reveals.</p>
+          </div>
+          <div class="space-y-3">
+            <div class="aspect-[4/3] overflow-hidden rounded-sm bg-neutral-200">
+              <img src="Kids Room.png" alt="Kids Bedroom Nursery" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-display font-bold text-base">Kids Nursery</h4>
+            <p class="text-xs text-muted leading-relaxed">Custom floor-to-ceiling cabinetry, geometric wall accents, modular shelving, and light Scandinavian birch finishes.</p>
+          </div>
+          <div class="space-y-3">
+            <div class="aspect-[4/3] overflow-hidden rounded-sm bg-neutral-200">
+              <img src="Study Room.png" alt="Study Room and Home Office" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-display font-bold text-base">Study / Guest Room</h4>
+            <p class="text-xs text-muted leading-relaxed">Dedicated executive desk, sage green daybed lounge, striped wallcovering, and floor-to-ceiling storage wardrobes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-rule mt-24 py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-muted block mb-2">DW Interiors</span>
+          <h4 class="font-display font-bold text-2xl">Have an upcoming Interior Design commission?</h4>
+        </div>
+        <a href="mailto:wienekedesigns@gmail.com?subject=Interior%20Design%20Commission%20Inquiry%20-%20DW%20Interiors" onclick="handleInquiry(event)" class="mt-6 md:mt-0 font-mono text-xs uppercase tracking-widest bg-ink text-white px-6 py-4 hover:bg-neutral-800 transition inline-block">
+          Direct Studio Inquiry
+        </a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
